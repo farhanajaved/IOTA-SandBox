@@ -8,6 +8,15 @@ This repository sets up a local IOTA sandbox using Docker Compose for testing an
 
 ---
 
+## 🧩 Components
+
+- **DLT-Adapter**: Verifies identity, filters redundant data, submits model hashes to Tangle.
+- **DLT-Verifier**: Validates updates, assigns reputation scores.
+- **DLT-Aggregator**: Computes global model from verified updates.
+- **DLT-DApp Manager**: Orchestrates interactions among modules.
+- **Off-chain Repository**: Stores actual model weights securely.
+
+
 ## 🛠️ Getting Started
 
 ### 🔧 Prerequisites
