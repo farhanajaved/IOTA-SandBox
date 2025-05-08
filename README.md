@@ -8,7 +8,7 @@ This repository sets up a local IOTA sandbox using Docker Compose for testing an
 
 ---
 
-## 🧩 Components
+## Components
 
 - **DLT-Adapter**: Verifies identity, filters redundant data, submits model hashes to Tangle.
 - **DLT-Verifier**: Validates updates, assigns reputation scores.
@@ -17,16 +17,16 @@ This repository sets up a local IOTA sandbox using Docker Compose for testing an
 - **Off-chain Repository**: Stores actual model weights securely.
 
 
-## 🛠️ Getting Started
+##  Getting Started
 
-### 🔧 Prerequisites
+### Prerequisites
 
 - Docker
 - Docker Compose
 
 ---
 
-### 🚀 Start the Sandbox
+### Start the Sandbox
 
 To start the sandbox environment:
 
@@ -49,13 +49,13 @@ You should see services like:
 
 ---
 
-## 🟢 Steps to Restart & Repeat Your IOTA Sandbox Transaction Tests
+## Steps to Restart & Repeat Your IOTA Sandbox Transaction Tests
 
 Use this section to reset and re-run your transaction testing setup at any time.
 
 ---
 
-### 1️⃣ Get Hornet’s IP Address
+### Get Hornet’s IP Address
 
 Run the following command to get Hornet's internal Docker IP:
 
@@ -73,7 +73,7 @@ Copy this IP to use in your API requests.
 
 ---
 
-### 2️⃣ Verify Hornet is Running
+### Verify Hornet is Running
 
 Use the following command to check if Hornet is healthy:
 
@@ -91,7 +91,7 @@ If you see `"isHealthy": true`, then Hornet is running correctly.
 
 ---
 
-### 3️⃣ Send a Test Transaction
+### Send a Test Transaction
 
 ```bash
 time curl -X POST http://<Hornet-IP>:14265/api/core/v2/blocks \
@@ -115,7 +115,7 @@ Example output:
 
 ---
 
-### 4️⃣ Verify the Sent Transaction
+### Verify the Sent Transaction
 
 Use the `blockId` returned in the previous step:
 
@@ -133,7 +133,7 @@ If you see the block data, the transaction was successfully submitted to the Tan
 
 ---
 
-### 5️⃣ Automate Multiple Transactions (with Latency Logging)
+### Automate Multiple Transactions (with Latency Logging)
 
 Use this loop to send 10 transactions and log the latency of each:
 
@@ -158,7 +158,7 @@ Replace `<Hornet-IP>` with the actual IP you got in step 1.
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 iota-sandbox/
@@ -189,7 +189,7 @@ data/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This sandbox is for personal testing and learning. Feel free to fork and modify it for your own IOTA experiments.
 
